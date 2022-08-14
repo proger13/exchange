@@ -48,12 +48,35 @@ td {
  }
 
  button {
-  background-color: #4CAF50; /* Green */
+  background-color: #07a90c; /* Green */
   border: none;
-  color: white;
-  padding: 15px 32px;
+  color: rgb(91, 5, 69);
+  padding: 20px 82px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.update {
+  height: 150px;
+  width: 150px;
+  background-color: blueviolet !important;
+  margin: 80px;
+}
+
+.filter {
+  height: 150px;
+  width: 150px;
+  background-color: orange !important;
+  margin: 80px !important;
+}
+
+.wtndiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
 }

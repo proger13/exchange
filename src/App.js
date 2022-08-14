@@ -1,11 +1,12 @@
-
 import './App.css';
 import React, { useState } from 'react';
 import { XMLParser } from 'fast-xml-parser';
+import { Button, TextField } from '@mui/material';
+
 
 
 function App() {
-  
+
   const [result, setResult] = useState([])
   const currencyList = result.map(e => {
     return <tr><td>{e.Name}</td><td>{e.Name}</td></tr>
@@ -13,7 +14,7 @@ function App() {
 
   function sortName() {
     const result2 = [...result]
-    result2.sort((a, b) => a.Name.localCompare((b.Name))
+    result2.sort((a, b) => a.Name.localCompare(b.Name))
     setResult(result2)
   }
 
@@ -25,15 +26,20 @@ function App() {
   }
   return (
     <div>
-      <button className='test' onClick={push}> UP </button>
-      <button className='test' onClick={sortName}>  </button>
+      <div className='wtndiv'>
+        <button className='test' onClick={push}> UP </button>
+        <Button className='test' onClick={sortName}> filter </Button>
+      </div>
       <table>
         <tr>
-          <td></td>
-          <td></td>
+          <td>Name</td>
+          <td>index</td>
         </tr>
         {currencyList}
       </table>
+      <div>
+        <TextField> Search</TextField>
+      </div>
     </div>
   )
 
