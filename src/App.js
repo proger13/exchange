@@ -24,6 +24,10 @@ function App() {
       .then(parser => new XMLParser().parse(parser))
       .then(result => setResult(result.ValCurs.Valute))
   }
+
+  function moneyConverter(valnum) {
+    document.getElementById("outputrub").innerHTML=valnum*60
+  }
   return (
     <div>
       <div className='wtndiv'>
