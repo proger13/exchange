@@ -9,7 +9,7 @@ function App() {
 
   const [result, setResult] = useState([])
   const currencyList = result.map(e => {
-    return <tr><td>{e.Name}</td><td>{e.Name}</td></tr>
+    return <tr><td>{e.Name}</td><td>{e.Value}</td></tr>
   })
 
   function sortName() {
@@ -25,9 +25,7 @@ function App() {
       .then(result => setResult(result.ValCurs.Valute))
   }
 
-  function moneyConverter(valnum) {
-    document.getElementById("outputrub").innerHTML=valnum*60
-  }
+  
   return (
     <div>
       <div className='wtndiv'>
@@ -45,6 +43,7 @@ function App() {
         <TextField> Search</TextField>
       </div>
     </div>
+    
   )
 
 
